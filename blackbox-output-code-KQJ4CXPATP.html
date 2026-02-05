@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Helper</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #4CAF50; color: white; text-align: center; padding: 1em; }
+        nav { display: flex; justify-content: center; background-color: #333; flex-wrap: wrap; }
+        nav a { color: white; padding: 1em; text-decoration: none; }
+        nav a:hover { background-color: #555; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2em; }
+        .subject { border: 1px solid #ddd; padding: 1em; margin: 1em 0; background-color: white; }
+        .video { margin: 1em 0; }
+        iframe { width: 100%; height: 315px; max-width: 560px; }
+        footer { text-align: center; padding: 1em; background-color: #333; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Study Helper</h1>
+        <p>Help with studies in every subject! Includes YouTube tutorials.</p>
+    </header>
+    <nav>
+        <a href="#math">Math</a>
+        <a href="#science">Science</a>
+        <a href="#english">English</a>
+        <a href="#history">History</a>
+        <a href="#languages">Languages</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="math" class="subject">
+            <h2>Math Tutorials</h2>
+            <p>Download notes: <a href="math-notes.pdf">Math Basics PDF</a></p>
+            <div class="video">
+                <h3>Algebra Basics</h3>
+                <iframe src="https://www.youtube.com/embed/0rHzJ0bXKv4" frameborder="0" allowfullscreen></iframe>
+                <p>From Khan Academy. <a href="https://www.youtube.com/playlist?list=PL19E79A0638C8D449">Full Algebra Playlist</a></p>
+            </div>
+            <div class="video">
+                <h3>Calculus Intro</h3>
+                <iframe src="https://www.youtube.com/embed/WUvTyaaNkzM" frameborder="0" allowfullscreen></iframe>
+                <p>From 3Blue1Brown. <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr">Essence of Calculus Playlist</a></p>
+            </div>
+            <button onclick="startQuiz('math')">Take Quiz</button>
+        </section>
+        <section id="science" class="subject">
+            <h2>Science Tutorials</h2>
+            <p>Download notes: <a href="science-notes.pdf">Physics Basics PDF</a></p>
+            <div class="video">
+                <h3>Physics Fundamentals</h3>
+                <iframe src="https://www.youtube.com/embed/2rjy6j2SsQk" frameborder="0" allowfullscreen></iframe>
+                <p>From Crash Course. <a href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtN0ge7yDk_UA0ldZJdhwko">Physics Playlist</a></p>
+            </div>
+            <div class="video">
+                <h3>Biology Basics</h3>
+                <iframe src="https://www.youtube.com/embed/sOKy-8T2n5E" frameborder="0" allowfullscreen></iframe>
+                <p>From Amoeba Sisters. <a href="https://www.youtube.com/playlist?list=PLwL0Myd7Dk1F0iQPGrjehze3eDpco1eVz">Biology Playlist</a></p>
+            </div>
+            <button onclick="startQuiz('science')">Take Quiz</button>
+        </section>
+        <section id="english" class="subject">
+            <h2>English Tutorials</h2>
+            <div class="video">
+                <h3>Grammar Rules</h3>
+                <iframe src="https://www.youtube.com/embed/0HiJ4xxbJ5M" frameborder="0" allowfullscreen></iframe>
+                <p>From English with Lucy. <a href="https://www.youtube.com/playlist?list=PLmwr9polMHwsR35rD9spEhjFU2NXIYb_">Grammar Playlist</a></p>
+            </div>
+            <div class="video">
+                <h3>Literature Analysis</h3>
+                <iframe src="https://www.youtube.com/embed/8crMn1m7Tws" frameborder="0" allowfullscreen></iframe>
+                <p>From Crash Course. <a href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtOeEc9z_2Z4jzc8gO-5Fkt_">Literature Playlist</a></p>
+            </div>
+        </section>
+        <section id="history" class="subject">
+            <h2>History Tutorials</h2>
+            <div class="video">
+                <h3>World History Overview</h3>
+                <iframe src="https://www.youtube.com/embed/8dOUbBqB7-0" frameborder="0" allowfullscreen></iframe>
+                <p>From Crash Course. <a href="https://www.youtube.com/playlist?list=PLBDA2E52FB1EF80C9">World History Playlist</a></p>
+            </div>
+            <div class="video">
+                <h3>Ancient Civilizations</h3>
+                <iframe src="https://www.youtube.com/embed/SoNDRj2XbNo" frameborder="0" allowfullscreen></iframe>
+                <p>From Khan Academy. <a href="https://www.youtube.com/playlist?list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7">History Playlist</a></p>
+            </div>
+        </section>
+        <section id="languages" class="subject">
+            <h2>Languages Tutorials</h2>
+            <div class="video">
+                <h3>Spanish Basics</h3>
+                <iframe src="https://www.youtube.com/embed/Sp9QAfE6O5U" frameborder="0" allowfullscreen></iframe>
+                <p>From SpanishPod101. <a href="https://www.youtube.com/playlist?list=PLD6DA74C4C8B7B0B2">Spanish Playlist</a></p>
+            </div>
+            <div class="video">
+                <h3>French Pronunciation</h3>
+                <iframe src="https://www.youtube.com/embed/3PzBP9qKz6g" frameborder="0" allowfullscreen></iframe>
+                <p>From Learn French with Alexa. <a href="https://www.youtube.com/playlist?list=PL6XpjO4jE2I8GxS1cZrhgiJ4JAEJsCWc">French Playlist</a></p>
+            </div>
+        </section>
+        <section id="contact" class="subject">
+            <h2>Contact Us</h2>
+            <p>Suggest more tutorials!</p>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message"></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Student Study Helper. Videos from YouTube for educational use.</p>
+    </footer>
+    <script>
+        function startQuiz(subject) {
+            alert(`Starting ${subject} quiz! (Add real quiz logic here)`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Helper</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #4CAF50; color: white; text-align: center; padding: 1em; }
+        nav { display: flex; justify-content: center; background-color: #333; }
+        nav a { color: white; padding: 1em; text-decoration: none; }
+        nav a:hover { background-color: #555; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2em; }
+        .subject { border: 1px solid #ddd; padding: 1em; margin: 1em 0; background-color: white; }
+        footer { text-align: center; padding: 1em; background-color: #333; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Study Helper</h1>
+        <p>Help with studies in every subject!</p>
+    </header>
+    <nav>
+        <a href="#math">Math</a>
+        <a href="#science">Science</a>
+        <a href="#english">English</a>
+        <a href="#history">History</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="math" class="subject">
+            <h2>Math</h2>
+            <p>Download notes: <a href="math-notes.pdf">Math Basics PDF</a></p>
+            <p>Video: <a href="https://www.youtube.com/watch?v=example">Algebra Tutorial</a></p>
+            <button onclick="startQuiz('math')">Take Quiz</button>
+        </section>
+        <section id="science" class="subject">
+            <h2>Science</h2>
+            <p>Download notes: <a href="science-notes.pdf">Physics Basics PDF</a></p>
+            <p>Video: <a href="https://www.youtube.com/watch?v=example">Chemistry Intro</a></p>
+            <button onclick="startQuiz('science')">Take Quiz</button>
+        </section>
+        <!-- Add more sections for other subjects similarly -->
+        <section id="contact" class="subject">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message"></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Student Study Helper. All rights reserved.</p>
+    </footer>
+    <script>
+        function startQuiz(subject) {
+            alert(`Starting ${subject} quiz! (Add real quiz logic here)`);
+            // Example: Use a library like Quiz.js for interactive quizzes
+        }
+    </script>
+</body>
+</html>
